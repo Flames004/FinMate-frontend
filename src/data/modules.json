@@ -1,0 +1,38 @@
+{
+  "Rookie": [
+    { "id": "r1", "title": "The Piggy Bank Principle", "description": "What is saving and why do we do it? Learn to stash cash securely.", "duration": "5 min", "progress": 0 },
+    { "id": "r2", "title": "What is a Budget?", "description": "The simple 50/30/20 rule to manage your money efficiently.", "duration": "10 min", "progress": 0 },
+    { "id": "r3", "title": "Needs vs. Wants", "description": "Learn how to prioritize your spending for better financial health.", "duration": "10 min", "progress": 0 },
+    { "id": "r4", "title": "Introduction to Banks", "description": "Checking vs. Savings accounts and how to avoid common bank fees.", "duration": "15 min", "progress": 0 },
+    { "id": "r5", "title": "Setting Financial Goals", "description": "How to create realistic short-term and long-term goals.", "duration": "10 min", "progress": 0 },
+    { "id": "r6", "title": "Dealing with Debt", "description": "Identify good vs. bad debt and strategies to avoid common debt traps.", "duration": "15 min", "progress": 0 },
+    { "id": "r7", "title": "Track Every Penny", "description": "Practical methods to log daily expenses and build financial awareness.", "duration": "10 min", "progress": 0 },
+    { "id": "r8", "title": "Understanding Paychecks", "description": "Decoding your pay stub: gross pay, taxes, deductions, and net pay.", "duration": "15 min", "progress": 0 },
+    { "id": "r9", "title": "The Envelope System", "description": "A classic, hands-on budgeting technique using literal cash envelopes.", "duration": "10 min", "progress": 0 },
+    { "id": "r10", "title": "First $1,000 Saved", "description": "Actionable steps to quickly build your starter emergency fund.", "duration": "20 min", "progress": 0 }
+  ],
+  "Explorer": [
+    { "id": "e1", "title": "Credit Cards 101", "description": "How not to fall into the vicious debt trap while building credit.", "duration": "15 min", "progress": 0 },
+    { "id": "e2", "title": "Emergency Funds", "description": "Why you need 3 to 6 months of expenses locked up in cash.", "duration": "10 min", "progress": 0 },
+    { "id": "e3", "title": "Understanding Credit Scores", "description": "How credit scores are calculated and why they matter for big purchases.", "duration": "15 min", "progress": 0 },
+    { "id": "e4", "title": "Beating Inflation", "description": "Why keeping cash under the mattress loses purchasing power over time.", "duration": "10 min", "progress": 0 },
+    { "id": "e5", "title": "The Psychology of Spending", "description": "Identifying emotional triggers and avoiding impulse purchases.", "duration": "15 min", "progress": 0 },
+    { "id": "e6", "title": "Introduction to Loans", "description": "The math behind auto loans, student loans, and fixed vs. variable rates.", "duration": "20 min", "progress": 0 },
+    { "id": "e7", "title": "Buying vs. Leasing", "description": "Financial breakdown and the true cost of owning a car.", "duration": "15 min", "progress": 0 },
+    { "id": "e8", "title": "Insurance Basics", "description": "Protecting your wealth: Health, Auto, and Renter's insurance essentials.", "duration": "20 min", "progress": 0 },
+    { "id": "e9", "title": "Negotiating Your Salary", "description": "Learn the skills to confidently ask for and get more money at work.", "duration": "15 min", "progress": 0 },
+    { "id": "e10", "title": "Sinking Funds", "description": "How to save incrementally for planned large expenses without stress.", "duration": "10 min", "progress": 0 }
+  ],
+  "Master": [
+    { "id": "m1", "title": "Intro to Investing", "description": "Stocks, Bonds, and ETFs for long-term growth and wealth building.", "duration": "20 min", "progress": 0 },
+    { "id": "m2", "title": "Compound Interest", "description": "The 8th wonder of the world. Watch your money grow exponentially.", "duration": "15 min", "progress": 0 },
+    { "id": "m3", "title": "ETFs vs Mutual Funds", "description": "Deep dive into costs, benefits, and how to choose the right fund.", "duration": "20 min", "progress": 0 },
+    { "id": "m4", "title": "Asset Allocation", "description": "Balancing risk and reward to match your investing timeline.", "duration": "15 min", "progress": 0 },
+    { "id": "m5", "title": "Tax-Advantaged Accounts", "description": "How to legally minimize taxes and keep more of your investment gains.", "duration": "20 min", "progress": 0 },
+    { "id": "m6", "title": "Real Estate 101", "description": "Introduction to rental properties, cash flow, and appreciation.", "duration": "25 min", "progress": 0 },
+    { "id": "m7", "title": "Retiring Early (FIRE)", "description": "The math and discipline behind Financial Independence, Retire Early.", "duration": "20 min", "progress": 0 },
+    { "id": "m8", "title": "Dividend Investing", "description": "Building a passive cash flow stream from holding high-yield stocks.", "duration": "15 min", "progress": 0 },
+    { "id": "m9", "title": "Digital Assets", "description": "Understanding the risks, rewards, and mechanics of cryptocurrencies.", "duration": "20 min", "progress": 0 },
+    { "id": "m10", "title": "Estate Planning", "description": "Wills, trusts, and ensuring your wealth transfers smoothly.", "duration": "15 min", "progress": 0 }
+  ]
+}

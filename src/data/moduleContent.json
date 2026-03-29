@@ -1,0 +1,274 @@
+{
+  "r1": {
+    "title": "The Piggy Bank Principle",
+    "content": "Saving money is the foundation of wealth-building. It acts as a safety measure for unexpected events and a strategic reserve for future opportunities. Delaying immediate gratification is key.\n\nBy developing the habit of stashing away a portion of everything you earn, you begin the essential shift from being a 'consumer' to a 'wealth-builder'.",
+    "quizzes": [
+      { "question": "What is the primary foundation of wealth-building?", "options": ["Spending", "Saving", "Borrowing", "Gambling"], "correctIndex": 1 },
+      { "question": "Saving requires delaying what?", "options": ["Taxes", "Income", "Immediate Gratification", "Inflation"], "correctIndex": 2 },
+      { "question": "Developing a savings habit shifts you from a consumer to a what?", "options": ["Producer", "Retailer", "Wealth-builder", "Banker"], "correctIndex": 2 }
+    ]
+  },
+  "r2": {
+    "title": "What is a Budget?",
+    "content": "A budget is a plan for every dollar you earn. The 50/30/20 rule states you should spend 50% on Needs (housing, utilities, minimum debt payments), 30% on Wants, and 20% on Savings & Investing.\n\nBy tracking your expenses and telling your money where to go, you take control of your financial future.",
+    "quizzes": [
+      { "question": "Under the 50/30/20 rule, how much goes to 'Wants'?", "options": ["20%", "30%", "50%", "10%"], "correctIndex": 1 },
+      { "question": "What does the 50% cover?", "options": ["Wants", "Investing", "Needs", "Taxes"], "correctIndex": 2 },
+      { "question": "Is a budget strictly about restricting spending?", "options": ["Yes", "No, it's about intentional spending", "Yes, only for poor people", "No, it encourages spending all money"], "correctIndex": 1 }
+    ]
+  },
+  "r3": {
+    "title": "Needs vs. Wants",
+    "content": "A 'Need' is essential for survival (food, shelter). A 'Want' improves life but isn't necessary (dining out, designer clothes).\n\nUnderstanding the distinct difference helps you prioritize your cash flow. In hardship, wants must be immediately cut back.",
+    "quizzes": [
+      { "question": "Which is considered a 'Need'?", "options": ["Designer Shoes", "Restaurant Meals", "Basic Groceries", "Video Games"], "correctIndex": 2 },
+      { "question": "What should you do with 'Wants' during a financial hardship?", "options": ["Increase them", "Cut them back", "Ignore them", "Borrow money for them"], "correctIndex": 1 },
+      { "question": "What is the primary purpose of defining Needs vs Wants?", "options": ["Restrict all fun", "Prioritize cash flow", "Impress others", "Increase limit"], "correctIndex": 1 }
+    ]
+  },
+  "r4": {
+    "title": "Introduction to Banks",
+    "content": "Checking accounts are highly liquid for daily transactions. Savings accounts offer slight interest for money you don't need immediately.\n\nAvoid high fees by choosing online banks with High-Yield Savings Accounts (HYSA) to protect your money and earn safe interest.",
+    "quizzes": [
+      { "question": "Which account is best for daily transactions?", "options": ["Savings", "CDs", "Checking", "Brokerage"], "correctIndex": 2 },
+      { "question": "What is a major advantage of HYSA?", "options": ["Paying higher fees", "Earning safe interest", "Unlimited daily spending", "Checks"], "correctIndex": 1 },
+      { "question": "Why should you be aware of bank maintenance fees?", "options": ["They help you save", "They eat away your balance", "They increase credit score", "They are mandatory"], "correctIndex": 1 }
+    ]
+  },
+  "r5": {
+    "title": "Setting Financial Goals",
+    "content": "Goals must be S.M.A.R.T: Specific, Measurable, Achievable, Relevant, and Time-bound. A vague goal is 'I want to be rich.' A SMART goal is 'I want to save $5,000 for a car in 12 months.'\n\nBreaking down large goals into weekly targets reduces overwhelm.",
+    "quizzes": [
+      { "question": "What does 'T' in S.M.A.R.T stand for?", "options": ["Tax-free", "Time-bound", "Total", "Target"], "correctIndex": 1 },
+      { "question": "Which goal is better structured?", "options": ["I want to be rich", "Save $5k in a year", "Pay off debt someday", "I want a car"], "correctIndex": 1 },
+      { "question": "How do you reduce the feeling of overwhelm for large goals?", "options": ["Ignore them", "Break them down into smaller targets", "Borrow money", "Procrastinate"], "correctIndex": 1 }
+    ]
+  },
+  "r6": {
+    "title": "Dealing with Debt",
+    "content": "Not all debt is equal. 'Good debt' builds equity (low-interest mortgage). 'Bad debt' drains wealth rapidly (credit cards).\n\nPay off high-interest debt aggressively. Use the 'Debt Snowball' (pay smallest balances first) or 'Debt Avalanche' (pay highest interest first).",
+    "quizzes": [
+      { "question": "Which is typically considered 'bad debt'?", "options": ["Low-interest mortgage", "Credit card balance", "Subsidized student loans", "Business loan"], "correctIndex": 1 },
+      { "question": "What is the 'Debt Avalanche' method?", "options": ["Paying smallest balance first", "Paying highest interest first", "Ignoring all debt", "Consolidating randomly"], "correctIndex": 1 },
+      { "question": "Why is the 'Debt Snowball' popular?", "options": ["Saves money mathematically", "Provides quick psychological wins", "Requires no effort", "Lowers interest rates automatically"], "correctIndex": 1 }
+    ]
+  },
+  "r7": {
+    "title": "Track Every Penny",
+    "content": "Diagnose finances by tracking every transaction for a month. This reveals 'spending leaks'—small, recurring purchases that add up massively.\n\nUse an app or spreadsheet to see exactly where your money goes.",
+    "quizzes": [
+      { "question": "What is a 'spending leak'?", "options": ["Hole in wallet", "Small recurring purchases that add up", "Banking error", "Taxes"], "correctIndex": 1 },
+      { "question": "What is the first step to fixing finances?", "options": ["Investing everything", "Tracking every transaction", "Getting a massive loan", "Ignoring expenses"], "correctIndex": 1 },
+      { "question": "What tool can you use to track expenses?", "options": ["Spreadsheet", "App", "Notebook", "All of the above"], "correctIndex": 3 }
+    ]
+  },
+  "r8": {
+    "title": "Understanding Paychecks",
+    "content": "Your 'Gross Pay' is what you earn before deductions. 'Net Pay' is what hits your bank account after taxes and benefits.\n\nVerify taxes to avoid giving the government an unnecessary interest-free loan all year.",
+    "quizzes": [
+      { "question": "What is 'Net Pay'?", "options": ["Total before deductions", "Home take after deductions", "Paid to taxes", "Boss's salary"], "correctIndex": 1 },
+      { "question": "What is 'Gross Pay'?", "options": ["Total before deductions", "Money you take home", "Annual bonus", "Taxed income"], "correctIndex": 0 },
+      { "question": "Why adjust tax withholdings?", "options": ["To get fired", "Avoid giving government interest-free loan", "Pay higher taxes", "Reduce gross pay"], "correctIndex": 1 }
+    ]
+  },
+  "r9": {
+    "title": "The Envelope System",
+    "content": "Allocate physical cash into envelopes labeled for specific categories (Groceries, Fun). When empty, stop spending in that category.\n\nThis enforces discipline because parting with physical cash hurts more psychologically.",
+    "quizzes": [
+      { "question": "What happens when an envelope is empty?", "options": ["Borrow from credit card", "Stop spending in that category", "Ask for raise", "Print money"], "correctIndex": 1 },
+      { "question": "Why does the envelope system work?", "options": ["Cash is limitless", "Cards are hard to use", "Parting with physical cash hurts more", "Earns high interest"], "correctIndex": 2 },
+      { "question": "What budgeting method is this?", "options": ["Debt-based", "Cash-based", "Crypto-based", "Credit-based"], "correctIndex": 1 }
+    ]
+  },
+  "r10": {
+    "title": "First $1,000 Saved",
+    "content": "A starter emergency fund of $1,000 covers minor unexpected events (flat tire, minor medical bill), preventing the use of credit cards.\n\nFocus intensely on this goal. Slash 'Wants' until this buffer is fully funded.",
+    "quizzes": [
+      { "question": "What is the main purpose of a starter emergency fund?", "options": ["Invest in stocks", "Cover minor unexpected events", "Go on vacation", "Pay standard rent"], "correctIndex": 1 },
+      { "question": "What happens if you have an emergency but no fund?", "options": ["Free pass", "Forced to use high-interest debt", "Emergency disappears", "Taxes decrease"], "correctIndex": 1 },
+      { "question": "How urgently should you fund your starter emergency fund?", "options": ["Take time", "Intensely and as fast as possible", "Using spare change", "Wait until retirement"], "correctIndex": 1 }
+    ]
+  },
+  
+  "e1": {
+    "title": "Credit Cards 101",
+    "content": "Credit cards are tools. Pay the balance in full every month to avoid interest. They build credit scores and offer cash back rewards.\n\nCarrying a balance turns a useful tool into a massive wealth-destroying liability.",
+    "quizzes": [
+      { "question": "How do you avoid credit card interest?", "options": ["Pay the minimum", "Pay the balance in full every month", "Ignore it", "Pay cash"], "correctIndex": 1 },
+      { "question": "What happens if you carry a balance?", "options": ["You earn rewards", "It builds wealth", "It destroys wealth with high interest", "Credit score goes to 800"], "correctIndex": 2 },
+      { "question": "Are credit cards inherently evil?", "options": ["Yes", "No, they are tools", "Only on Tuesdays", "Yes, they cause inflation"], "correctIndex": 1 }
+    ]
+  },
+  "e2": {
+    "title": "Emergency Funds",
+    "content": "A fully funded emergency fund should cover 3 to 6 months of living expenses. It protects you against major catastrophes like job loss or severe medical issues.\n\nKeep this money in a liquid, easily accessible High-Yield Savings Account.",
+    "quizzes": [
+      { "question": "How many months of expenses should a full emergency fund cover?", "options": ["1 month", "3 to 6 months", "12 to 24 months", "0 months"], "correctIndex": 1 },
+      { "question": "What does this fund protect against?", "options": ["Minor flat tires", "Major job loss", "Routine groceries", "Vacations"], "correctIndex": 1 },
+      { "question": "Where should this money be stored?", "options": ["Under the mattress", "In the stock market", "High-Yield Savings Account", "Crypto"], "correctIndex": 2 }
+    ]
+  },
+  "e3": {
+    "title": "Understanding Credit Scores",
+    "content": "Your credit score determines loan eligibility and interest rates. It relies heavily on payment history and credit utilization (how much of your limit you use).\n\nKeep utilization below 30% and never miss a payment to maintain a stellar score.",
+    "quizzes": [
+      { "question": "What does your credit score impact the most?", "options": ["Stock prices", "Loan eligibility and interest rates", "Income tax", "Groceries"], "correctIndex": 1 },
+      { "question": "What is credit utilization?", "options": ["How often you use a card", "Using the card for utilities", "Percentage of credit limit you are using", "Limit divided by age"], "correctIndex": 2 },
+      { "question": "To maintain a good score, keep utilization below what?", "options": ["10%", "30%", "50%", "100%"], "correctIndex": 1 }
+    ]
+  },
+  "e4": {
+    "title": "Beating Inflation",
+    "content": "Inflation is the invisible tax that reduces your purchasing power over time. $100 today buys less than $100 ten years ago.\n\nTo beat inflation, your money must be invested in assets (stocks, real estate) that grow faster than the inflation rate.",
+    "quizzes": [
+      { "question": "What does inflation do?", "options": ["Makes things cheaper", "Reduces purchasing power", "Increases cash value", "Nothing"], "correctIndex": 1 },
+      { "question": "How do you beat inflation?", "options": ["Hoard cash", "Keep in checking account", "Invest in growing assets", "Spend everything immediately"], "correctIndex": 2 },
+      { "question": "Inflation is often called the invisible what?", "options": ["Friend", "Tax", "Bank", "Loan"], "correctIndex": 1 }
+    ]
+  },
+  "e5": {
+    "title": "The Psychology of Spending",
+    "content": "Marketers use psychological triggers like FOMO (Fear Of Missing Out) and scarcity to make you spend. Being self-aware of these triggers prevents impulse buys.\n\nUse the '24-hour rule': wait 24 hours before making any unplanned purchase.",
+    "quizzes": [
+      { "question": "What psychological trigger makes you fear you'll miss a deal?", "options": ["YOLO", "FOMO", "ASAP", "DIY"], "correctIndex": 1 },
+      { "question": "What is the '24-hour rule'?", "options": ["Shop for 24 hours", "Wait 24 hours before buying", "Only buy things once a day", "Return things in 24 hours"], "correctIndex": 1 },
+      { "question": "Why do marketers use scarcity?", "options": ["To lower prices", "To make you spend impulsively", "To help you save", "Out of kindness"], "correctIndex": 1 }
+    ]
+  },
+  "e6": {
+    "title": "Introduction to Loans",
+    "content": "Loans let you borrow money now for a cost later (interest). Auto and student loans are common. Fixed-rate loans have unchangeable interest, while variable rates fluctuate with the market.\n\nAlways review the 'Total Cost of Loan' before signing.",
+    "quizzes": [
+      { "question": "What happens with a fixed-rate loan?", "options": ["Interest rate fluctuates", "Interest rate never changes", "You never pay it back", "Balance disappears"], "correctIndex": 1 },
+      { "question": "What is the cost of borrowing money?", "options": ["Equity", "Principal", "Interest", "Taxes"], "correctIndex": 2 },
+      { "question": "What should you review before signing?", "options": ["The font", "Total Cost of Loan", "The paper brand", "Nothing"], "correctIndex": 1 }
+    ]
+  },
+  "e7": {
+    "title": "Buying vs. Leasing",
+    "content": "Buying a car means you eventually own the asset, though cars depreciate rapidly. Leasing is renting a car long-term, usually resulting in endless monthly payments.\n\nBuying an affordable used car in cash is statistically the best wealth-building move.",
+    "quizzes": [
+      { "question": "What is leasing essentially?", "options": ["Investing", "Renting long-term", "Buying outright", "Saving"], "correctIndex": 1 },
+      { "question": "What is the downside of cars as assets?", "options": ["They appreciate", "They depreciate rapidly", "They grow money", "They are too liquid"], "correctIndex": 1 },
+      { "question": "What is the best financial move for a simple vehicle?", "options": ["Leasing a luxury car", "Buying a used car in cash", "Financing for 90 months", "Leasing a used car"], "correctIndex": 1 }
+    ]
+  },
+  "e8": {
+    "title": "Insurance Basics",
+    "content": "Insurance transfers extreme financial risk from you to a company. Essential insurances include Health, Auto, and Renter's/Homeowner's.\n\nTerm life insurance is highly recommended if others depend on your income.",
+    "quizzes": [
+      { "question": "What is the core purpose of insurance?", "options": ["To make you rich", "To transfer extreme financial risk", "To avoid taxes", "To get free stuff"], "correctIndex": 1 },
+      { "question": "When is Term Life insurance recommended?", "options": ["Never", "Always", "If others depend on your income", "If you are single"], "correctIndex": 2 },
+      { "question": "Which of these is generally an essential insurance?", "options": ["Pet insurance", "Health insurance", "Phone insurance", "Flight insurance"], "correctIndex": 1 }
+    ]
+  },
+  "e9": {
+    "title": "Negotiating Your Salary",
+    "content": "Increasing your income is the ultimate wealth multiplier. Negotiating focuses on highlighting the unique value you bring to the company.\n\nNever accept the first offer without respectful negotiation, and always back up your requests with data.",
+    "quizzes": [
+      { "question": "What is the ultimate wealth multiplier?", "options": ["Extreme couponing", "Increasing your income", "Buying lottery tickets", "Skipping breakfast"], "correctIndex": 1 },
+      { "question": "What should negotiations focus on?", "options": ["Your personal debts", "The unique value you bring", "Your coworker's salary", "Complaining"], "correctIndex": 1 },
+      { "question": "Should you always accept the first offer?", "options": ["Yes, unconditionally", "No, respectfully negotiate", "Yes, to be polite", "Yes, it's illegal not to"], "correctIndex": 1 }
+    ]
+  },
+  "e10": {
+    "title": "Sinking Funds",
+    "content": "A Sinking Fund is money saved incrementally each month for a specific, known future expense (like Christmas gifts or property taxes).\n\nThis prevents these regular, expected expenses from feeling like 'emergencies' that derail your budget.",
+    "quizzes": [
+      { "question": "What is a Sinking Fund?", "options": ["Money thrown away", "Incremental savings for a known future expense", "An emergency fund", "A bad investment"], "correctIndex": 1 },
+      { "question": "Does Christmas count as an emergency?", "options": ["Yes", "No, it is a known event", "Only if you forget it", "Always"], "correctIndex": 1 },
+      { "question": "What do sinking funds prevent?", "options": ["Expected expenses from feeling like emergencies", "Taxes", "Inflation", "Wealth"], "correctIndex": 0 }
+    ]
+  },
+
+  "m1": {
+    "title": "Intro to Investing",
+    "content": "Investing puts your money to work so it earns more money. Stocks represent partial ownership of a company. Bonds are loans you make to entities.\n\nHistorically, the stock market trends upwards over decades, making it essential for out-pacing inflation and building true wealth.",
+    "quizzes": [
+      { "question": "What does a stock represent?", "options": ["A loan", "Partial ownership of a company", "A bank account", "Insurance"], "correctIndex": 1 },
+      { "question": "Why is investing essential?", "options": ["To lose money", "To out-pace inflation and build wealth", "To pay immediate bills", "To avoid working hard"], "correctIndex": 1 },
+      { "question": "What is a Bond?", "options": ["Superglue", "A stock", "A loan you make to an entity", "A cash reserve"], "correctIndex": 2 }
+    ]
+  },
+  "m2": {
+    "title": "Compound Interest",
+    "content": "Compound interest is earning interest on your originally invested money AND on the interest that money has already earned.\n\nOver decades, this causes your wealth to grow exponentially. Time is the most critical factor in compound growth.",
+    "quizzes": [
+      { "question": "What is compound interest?", "options": ["Simple percentage", "Earning interest on interest", "A bank fee", "Inflation"], "correctIndex": 1 },
+      { "question": "What is the most critical factor in compound growth?", "options": ["Time", "Initial capital", "Luck", "Bank choice"], "correctIndex": 0 },
+      { "question": "How does compound interest affect your wealth over decades?", "options": ["Decreases it", "Grows it linearly", "Grows it exponentially", "Keeps it flat"], "correctIndex": 2 }
+    ]
+  },
+  "m3": {
+    "title": "ETFs vs Mutual Funds",
+    "content": "Exchange Traded Funds (ETFs) and Index Funds offer instant diversification by holding hundreds of stocks. \n\nMutual funds are actively managed and carry high fees. ETFs track indexes (like the S&P 500), have ultra-low fees, and statistically outperform active managers over time.",
+    "quizzes": [
+      { "question": "What do ETFs and Index Funds offer?", "options": ["High fees", "Instant diversification", "Guaranteed losses", "Active management"], "correctIndex": 1 },
+      { "question": "Why do index ETFs typically beat mutual funds?", "options": ["They have higher fees", "They are actively managed", "They have ultra-low fees and track the whole market", "They only hold 1 stock"], "correctIndex": 2 },
+      { "question": "What does the S&P 500 do?", "options": ["Tracks the top 500 US companies", "Sells cars", "Tracks 500 bonds", "Nothing"], "correctIndex": 0 }
+    ]
+  },
+  "m4": {
+    "title": "Asset Allocation",
+    "content": "Asset allocation is spreading your risk across different investments (stocks, bonds, real estate). \n\nYoung investors typically hold heavy stock portfolios for growth, shifting towards stable bonds as they approach retirement to preserve capital.",
+    "quizzes": [
+      { "question": "What is Asset Allocation?", "options": ["Buying one stock", "Spreading risk across different investments", "Selling everything", "Paying taxes"], "correctIndex": 1 },
+      { "question": "What do young investors mostly hold?", "options": ["Cash", "Heavy bonds", "Heavy stocks for growth", "Gold"], "correctIndex": 2 },
+      { "question": "Why shift to bonds near retirement?", "options": ["To risk it all", "To preserve capital stability", "To avoid all taxes", "To grow exponentially"], "correctIndex": 1 }
+    ]
+  },
+  "m5": {
+    "title": "Tax-Advantaged Accounts",
+    "content": "Accounts like 401(k)s and IRAs protect your investments from severe taxation. A Roth IRA lets you pay taxes now so your money grows and withdraws completely tax-free later.\n\nAlways maximize employer 401(k) matches—it's free money.",
+    "quizzes": [
+      { "question": "What is the major benefit of a Roth IRA?", "options": ["Tax-free growth and withdrawals later", "Tax deduction today", "No investment limits", "It is free"], "correctIndex": 0 },
+      { "question": "What should you do if your employer offers a 401(k) match?", "options": ["Ignore it", "Maximize it entirely because it's free money", "Take half", "Complain"], "correctIndex": 1 },
+      { "question": "What do these accounts protect you from?", "options": ["Inflation", "Robbers", "Severe taxation", "Market crashes"], "correctIndex": 2 }
+    ]
+  },
+  "m6": {
+    "title": "Real Estate 101",
+    "content": "Real Estate offers wealth generation through cash flow (rental income), appreciation, and loan paydown (tenants paying your mortgage). \n\nIt requires leverage (debt) and management, making it less passive than stocks but incredibly powerful.",
+    "quizzes": [
+      { "question": "How does real estate generate cash flow?", "options": ["Appreciation", "Rental income", "Taxes", "Maintenance"], "correctIndex": 1 },
+      { "question": "Who essentially pays down a rental property mortgage?", "options": ["The bank", "The government", "The tenant", "The landlord"], "correctIndex": 2 },
+      { "question": "Is real estate as passive as index funds?", "options": ["Yes, entirely", "No, it requires management", "Yes, it manages itself", "Stocks are less passive"], "correctIndex": 1 }
+    ]
+  },
+  "m7": {
+    "title": "Retiring Early (FIRE)",
+    "content": "The FIRE movement (Financial Independence, Retire Early) relies on saving aggressively (50%+ of income) and investing mainly in index funds.\n\nThe '4% Rule' states if you can live on 4% of your portfolio's value annually, you are financially independent.",
+    "quizzes": [
+      { "question": "What does FIRE stand for?", "options": ["Financial Independence, Retire Early", "Fix Income, Retire Eventually", "Finance, Invest, Real Estate", "Free Income, Rich Entity"], "correctIndex": 0 },
+      { "question": "What is the core behavior of FIRE participants?", "options": ["Saving 5%", "Aggressive savings (50%+ of income)", "Only buying crypto", "Never working"], "correctIndex": 1 },
+      { "question": "What rule defines safe withdrawal rates for financial independence?", "options": ["The 1% Rule", "The 10% Rule", "The 4% Rule", "The 50/30/20 Rule"], "correctIndex": 2 }
+    ]
+  },
+  "m8": {
+    "title": "Dividend Investing",
+    "content": "Some companies pay out a portion of their profits to shareholders directly. This is called a dividend. \n\nDividend investing focuses on holding established companies that provide steady, passive cash flow quarterly rather than purely hoping the stock price goes up.",
+    "quizzes": [
+      { "question": "What is a dividend?", "options": ["A tax", "A loan", "Profits paid directly to shareholders", "A bank fee"], "correctIndex": 2 },
+      { "question": "What is the main goal of dividend investing?", "options": ["Immediate stock spikes", "Steady passive cash flow", "Going bankrupt", "Selling the stock daily"], "correctIndex": 1 },
+      { "question": "How often are dividends typically paid?", "options": ["Daily", "Weekly", "Quarterly", "Decade"], "correctIndex": 2 }
+    ]
+  },
+  "m9": {
+    "title": "Digital Assets",
+    "content": "Cryptocurrencies (like Bitcoin) operate on decentralized blockchains. They offer massive upside potential but carry extreme volatility and regulatory risk.\n\nThey should generally only comprise a small, highly speculative percentage of a well-balanced portfolio.",
+    "quizzes": [
+      { "question": "What underlying technology powers cryptocurrencies?", "options": ["Banks", "Centralized servers", "Decentralized blockchains", "ATMs"], "correctIndex": 2 },
+      { "question": "What is a major characteristic of crypto?", "options": ["Extreme stability", "Extreme volatility", "Guaranteed returns", "FDIC insurance"], "correctIndex": 1 },
+      { "question": "How should crypto fit into a mature portfolio?", "options": ["100% allocation", "As an emergency fund", "A small highly speculative percentage", "0% always"], "correctIndex": 2 }
+    ]
+  },
+  "m10": {
+    "title": "Estate Planning",
+    "content": "Estate planning ensures your wealth transfers exactly how you wish upon passing. It includes drafting a Will, setting up Beneficiaries, and establishing Trusts.\n\nFailing to plan results in Probate, a horrific legal process where state courts decide who gets your assets.",
+    "quizzes": [
+      { "question": "What legal document directs asset transfer?", "options": ["A Will", "A budget", "An index fund", "A lease"], "correctIndex": 0 },
+      { "question": "What is the court process if you fail to plan?", "options": ["Dividend", "Probate", "Arbitration", "Foreclosure"], "correctIndex": 1 },
+      { "question": "What does a Trust do?", "options": ["Holds and protects assets for beneficiaries", "Sells stocks", "Earns 20% interest", "Pays off credit cards"], "correctIndex": 0 }
+    ]
+  }
+}
