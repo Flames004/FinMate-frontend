@@ -19,13 +19,13 @@ export default function HomeScreen({ }: Props) {
   const { width: screenWidth } = useWindowDimensions();
 
   useEffect(() => {
-    async function getUserLevel() {
+    async function getUserData() {
       const storedLevel = await AsyncStorage.getItem("@finmate_userLevel");
       if (storedLevel && (storedLevel === "Rookie" || storedLevel === "Explorer" || storedLevel === "Master")) {
         setLevel(storedLevel);
       }
     }
-    getUserLevel();
+    getUserData();
   }, []);
 
   useFocusEffect(
@@ -105,10 +105,12 @@ export default function HomeScreen({ }: Props) {
           <Text className="text-3xl font-bold text-white">FinMate</Text>
           <Text className="mt-1 text-sm text-slate-400">Your financial learning companion</Text>
         </View>
-        <View className="rounded-full border border-emerald-800 bg-emerald-900/40 px-3 py-1">
-          <Text className="text-xs font-semibold uppercase tracking-widest text-emerald-300">
-            {level}
-          </Text>
+        <View className="flex-row items-center gap-2">
+          <View className="rounded-full border border-emerald-800 bg-emerald-900/40 px-3 py-1">
+            <Text className="text-xs font-semibold uppercase tracking-widest text-emerald-300">
+              {level}
+            </Text>
+          </View>
         </View>
       </View>
 
@@ -198,9 +200,13 @@ export default function HomeScreen({ }: Props) {
             const modProgress = progressMap[mod.id] || 0;
             const isLeft = index % 2 === 0;
 
+            // Logic: first 3 are free, others require previous to be 100%
+            const isLocked = index > 2 && (progressMap[modules[index - 1].id] || 0) < 100;
+
             return (
               <Pressable
                 key={mod.id}
+                disabled={isLocked}
                 onPress={() =>
                   (navigation as any).navigate("Module", {
                     moduleId: mod.id,
@@ -213,6 +219,7 @@ export default function HomeScreen({ }: Props) {
                   right: 0,
                   flexDirection: isLeft ? 'row' : 'row-reverse',
                   alignItems: 'flex-start',
+                  opacity: isLocked ? 0.5 : 1,
                 }}
               >
                 {/* Node Circle */}
@@ -222,12 +229,12 @@ export default function HomeScreen({ }: Props) {
                     height: 48,
                     borderRadius: 24,
                     backgroundColor:
-                      modProgress === 100 ? '#10b981' : '#0f172a',
+                      isLocked ? '#1e293b' : (modProgress === 100 ? '#10b981' : '#0f172a'),
                     alignItems: 'center',
                     justifyContent: 'center',
                     borderWidth: 3,
                     borderColor:
-                      modProgress === 100 ? '#34d399' : '#334155',
+                      isLocked ? '#334155' : (modProgress === 100 ? '#34d399' : '#334155'),
                     marginLeft: isLeft ? leftCenter - 24 : 0,
                     marginRight: !isLeft
                       ? roadContainerWidth - rightCenter - 24
@@ -235,7 +242,9 @@ export default function HomeScreen({ }: Props) {
                     zIndex: 10,
                   }}
                 >
-                  {modProgress === 100 ? (
+                  {isLocked ? (
+                    <Text style={{ fontSize: 16 }}>🔒</Text>
+                  ) : modProgress === 100 ? (
                     <Text
                       style={{
                         fontSize: 20,
@@ -267,7 +276,7 @@ export default function HomeScreen({ }: Props) {
                     backgroundColor: '#0f172a',
                     borderRadius: 16,
                     borderWidth: 1,
-                    borderColor: '#1e293b',
+                    borderColor: isLocked ? '#1e293b' : '#334155',
                     padding: 12,
                   }}
                 >
@@ -275,7 +284,7 @@ export default function HomeScreen({ }: Props) {
                     style={{
                       fontSize: 14,
                       fontWeight: '600',
-                      color: '#fff',
+                      color: isLocked ? '#475569' : '#fff',
                     }}
                   >
                     {mod.title}
@@ -287,26 +296,28 @@ export default function HomeScreen({ }: Props) {
                       marginTop: 2,
                     }}
                   >
-                    {mod.duration} • {modProgress}% completed
+                    {isLocked ? "Locked" : `${mod.duration} • ${modProgress}% completed`}
                   </Text>
-                  <View
-                    style={{
-                      height: 4,
-                      backgroundColor: '#1e293b',
-                      borderRadius: 2,
-                      marginTop: 8,
-                      overflow: 'hidden',
-                    }}
-                  >
+                  {!isLocked && (
                     <View
                       style={{
                         height: 4,
-                        backgroundColor: '#34d399',
+                        backgroundColor: '#1e293b',
                         borderRadius: 2,
-                        width: `${modProgress}%`,
+                        marginTop: 8,
+                        overflow: 'hidden',
                       }}
-                    />
-                  </View>
+                    >
+                      <View
+                        style={{
+                          height: 4,
+                          backgroundColor: '#34d399',
+                          borderRadius: 2,
+                          width: `${modProgress}%`,
+                        }}
+                      />
+                    </View>
+                  )}
                 </View>
               </Pressable>
             );
