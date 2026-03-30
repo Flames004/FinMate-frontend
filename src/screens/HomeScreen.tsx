@@ -4,71 +4,35 @@ import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 import type { MainTabParamList } from "../types/navigation";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import MODULES_DATA from "../data/modules.json";
-import { useNavigation, useFocusEffect } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 import type { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
 import Svg, { Path } from "react-native-svg";
+import { useAuth } from "../context/AuthContext";
 
 type Props = NativeStackScreenProps<MainTabParamList, "Home">;
 
 export default function HomeScreen({ }: Props) {
-  const [level, setLevel] = useState("Rookie");
-  const [progressMap, setProgressMap] = useState<Record<string, number>>({});
+  const { userData, updateUserData } = useAuth();
+  const level = userData.level || "Rookie";
+  const progressMap = userData.progressMap;
+  
   const [budgetBalance, setBudgetBalance] = useState<number>(0);
   const [isBudgetConfigured, setIsBudgetConfigured] = useState(false);
   const navigation = useNavigation<BottomTabNavigationProp<MainTabParamList>>();
   const { width: screenWidth } = useWindowDimensions();
 
   useEffect(() => {
-    async function getUserData() {
-      const storedLevel = await AsyncStorage.getItem("@finmate_userLevel");
-      if (storedLevel && (storedLevel === "Rookie" || storedLevel === "Explorer" || storedLevel === "Master")) {
-        setLevel(storedLevel);
-      }
+    // Budget calculation remains local for immediate display, 
+    // but values come from synced userData
+    if (userData.monthly_budget > 0) {
+      setIsBudgetConfigured(true);
+      const totalSpent = userData.transactions.reduce((sum: number, t: any) => sum + t.amount, 0);
+      setBudgetBalance(Math.max(0, userData.monthly_budget - totalSpent));
+    } else {
+      setIsBudgetConfigured(false);
+      setBudgetBalance(0);
     }
-    getUserData();
-  }, []);
-
-  useFocusEffect(
-    useCallback(() => {
-      async function loadProgress() {
-        // level might be updated from state, MODULES_DATA needs to match.
-        // We ensure we read safely.
-        const currentModules = (MODULES_DATA as any)[level] || [];
-        const newProgressMap: Record<string, number> = {};
-        for (const mod of currentModules) {
-          try {
-            const val = await AsyncStorage.getItem(`@finmate_progress_${mod.id}`);
-            if (val) {
-              newProgressMap[mod.id] = parseInt(val, 10);
-            }
-          } catch (e) {
-            // ignore
-          }
-        }
-        setProgressMap(newProgressMap);
-
-        try {
-          const bVal = await AsyncStorage.getItem("@finmate_monthly_budget");
-          const tVal = await AsyncStorage.getItem("@finmate_transactions");
-          
-          if (bVal) {
-            setIsBudgetConfigured(true);
-            const budget = parseInt(bVal, 10);
-            let totalSpent = 0;
-            if (tVal) {
-              const txs = JSON.parse(tVal);
-              totalSpent = txs.reduce((sum: number, t: any) => sum + t.amount, 0);
-            }
-            setBudgetBalance(Math.max(0, budget - totalSpent));
-          } else {
-            setIsBudgetConfigured(false);
-            setBudgetBalance(0);
-          }
-        } catch (e) {}
-      }
-      loadProgress();
-    }, [level])
-  );
+  }, [userData.monthly_budget, userData.transactions]);
 
   const modules = MODULES_DATA[level as keyof typeof MODULES_DATA];
   const totalModules = modules.length;

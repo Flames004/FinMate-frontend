@@ -4,6 +4,9 @@ import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 import type { RootStackParamList } from "../types/navigation";
 import MODULE_CONTENT from "../data/moduleContent.json";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { syncData } from "../services/authService";
+import MODULES_DATA from "../data/modules.json";
+import { useAuth } from "../context/AuthContext";
 
 type Props = NativeStackScreenProps<RootStackParamList, "Module">;
 
@@ -19,6 +22,8 @@ export default function ModuleScreen({ route, navigation }: Props) {
     setSelectedOptions((prev) => ({ ...prev, [quizIndex]: optionIndex }));
   };
 
+  const { userData, updateUserData } = useAuth();
+
   const handleSubmit = async () => {
     if (Object.keys(selectedOptions).length < moduleData.quizzes.length) {
       return; 
@@ -32,7 +37,8 @@ export default function ModuleScreen({ route, navigation }: Props) {
 
     if (isAllCorrect) {
       try {
-        await AsyncStorage.setItem(`@finmate_progress_${moduleId}`, "100");
+        const newProgressMap = { ...userData.progressMap, [moduleId]: 100 };
+        await updateUserData({ progressMap: newProgressMap });
       } catch (e) {
         console.error("Failed to save progress", e);
       }

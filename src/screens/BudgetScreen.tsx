@@ -9,6 +9,8 @@ import {
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useFocusEffect } from "@react-navigation/native";
+import { syncData } from "../services/authService";
+import { useAuth } from "../context/AuthContext";
 
 type Transaction = {
   id: string;
@@ -25,8 +27,9 @@ const CATEGORY_META = {
 };
 
 export default function BudgetScreen() {
-  const [budget, setBudget] = useState<number>(0);
-  const [transactions, setTransactions] = useState<Transaction[]>([]);
+  const { userData, updateUserData } = useAuth();
+  const budget = userData.monthly_budget;
+  const transactions = userData.transactions;
   
   const [isSettingBudget, setIsSettingBudget] = useState(false);
   const [budgetInput, setBudgetInput] = useState("");
@@ -36,30 +39,10 @@ export default function BudgetScreen() {
   const [txAmount, setTxAmount] = useState("");
   const [txCategory, setTxCategory] = useState<"Needs" | "Wants" | "Savings">("Needs");
 
-  useFocusEffect(
-    useCallback(() => {
-      async function loadData() {
-        try {
-          const bVal = await AsyncStorage.getItem("@finmate_monthly_budget");
-          if (bVal) setBudget(parseInt(bVal, 10));
-
-          const tVal = await AsyncStorage.getItem("@finmate_transactions");
-          if (tVal) {
-            setTransactions(JSON.parse(tVal));
-          }
-        } catch (e) {
-          // ignore
-        }
-      }
-      loadData();
-    }, [])
-  );
-
   const handleSaveBudget = async () => {
     const val = parseInt(budgetInput, 10);
     if (!isNaN(val) && val > 0) {
-      setBudget(val);
-      await AsyncStorage.setItem("@finmate_monthly_budget", val.toString());
+      await updateUserData({ monthly_budget: val });
     }
     setIsSettingBudget(false);
   };
@@ -77,9 +60,7 @@ export default function BudgetScreen() {
     };
 
     const newTransactions = [newTx, ...transactions];
-    setTransactions(newTransactions);
-    
-    await AsyncStorage.setItem("@finmate_transactions", JSON.stringify(newTransactions));
+    await updateUserData({ transactions: newTransactions });
     
     setIsAddingTx(false);
     setTxDesc("");
@@ -236,8 +217,8 @@ export default function BudgetScreen() {
               </Text>
             </View>
           ) : (
-            transactions.map(t => {
-              const meta = CATEGORY_META[t.category];
+            transactions.map((t: Transaction) => {
+              const meta = CATEGORY_META[t.category as keyof typeof CATEGORY_META];
 
               return (
                 <View key={t.id} className="flex-row justify-between items-center border-b border-slate-800 py-4">

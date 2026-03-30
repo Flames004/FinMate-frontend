@@ -14,8 +14,9 @@ import { useRoute, useNavigation, RouteProp } from "@react-navigation/native";
 import type { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import type { RootStackParamList } from "../types/navigation";
 import { Ionicons } from "@expo/vector-icons";
-import { verifyOtp, sendOtp } from "../services/authService";
+import { verifyOtp, sendOtp, getMe } from "../services/authService";
 import { useAuth } from "../context/AuthContext";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 type OtpScreenRouteProp = RouteProp<RootStackParamList, "Otp">;
 type OtpScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, "Otp">;
@@ -50,7 +51,7 @@ export default function OtpScreen() {
     try {
       const response = await verifyOtp(phone, otp);
       if (response.success) {
-        // useAuth.signIn handles storage and navigation swap
+        // useAuth.signIn now handles fetching cloud profile and populating state/storage
         await signIn(response.token, response.data.level);
       }
     } catch (error: any) {

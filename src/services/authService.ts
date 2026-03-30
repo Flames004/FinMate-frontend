@@ -60,3 +60,18 @@ export const updateProfile = async (name: string) => {
     throw error.response?.data?.message || "Failed to update profile";
   }
 };
+
+export const syncData = async (data: any) => {
+  try {
+    const token = await getToken();
+    if (!token) return null;
+
+    const response = await axios.post(`${API_URL}/sync`, data, {
+      headers: { Authorization: `Bearer ${token}` }
+    });
+    return response.data;
+  } catch (error) {
+    console.error("Sync error:", error);
+    return null;
+  }
+};

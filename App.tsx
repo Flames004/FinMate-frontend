@@ -89,7 +89,8 @@ function MainTabs() {
 }
 
 function RootNavigator() {
-  const { userToken, userLevel, isLoading } = useAuth();
+  const { userToken, userData, isLoading } = useAuth();
+  const userLevel = userData.level;
 
   if (isLoading) {
     return (
