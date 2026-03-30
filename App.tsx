@@ -14,9 +14,14 @@ import NewsScreen from "./src/screens/NewsScreen";
 import ModuleScreen from "./src/screens/ModuleScreen";
 import BudgetScreen from "./src/screens/BudgetScreen";
 import CurrencyConverterScreen from "./src/screens/CurrencyConverterScreen";
+import LoginScreen from "./src/screens/LoginScreen";
+import OtpScreen from "./src/screens/OtpScreen";
+import ProfileScreen from "./src/screens/ProfileScreen";
+import { getToken } from "./src/services/authService";
 import type { RootStackParamList, MainTabParamList } from "./src/types/navigation";
 
 import { Ionicons } from "@expo/vector-icons";
+import { AuthProvider, useAuth } from "./src/context/AuthContext";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 const Tab = createBottomTabNavigator<MainTabParamList>();
@@ -68,30 +73,25 @@ function MainTabs() {
           ),
         }}
       />
+      <Tab.Screen
+        name="Profile"
+        component={ProfileScreen}
+        options={{
+          title: "Profile",
+          headerShown: false,
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="person-outline" size={size} color={color} />
+          ),
+        }}
+      />
     </Tab.Navigator>
   );
 }
 
-export default function App() {
-  const [initialRoute, setInitialRoute] = useState<keyof RootStackParamList | null>(null);
+function RootNavigator() {
+  const { userToken, userLevel, isLoading } = useAuth();
 
-  useEffect(() => {
-    async function checkOnboarding() {
-      try {
-        const level = await AsyncStorage.getItem("@finmate_userLevel");
-        if (level !== null) {
-          setInitialRoute("Main");
-        } else {
-          setInitialRoute("Onboarding");
-        }
-      } catch (e) {
-        setInitialRoute("Onboarding");
-      }
-    }
-    checkOnboarding();
-  }, []);
-
-  if (!initialRoute) {
+  if (isLoading) {
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "#020617" }}>
         <ActivityIndicator size="large" color="#34d399" />
@@ -100,22 +100,42 @@ export default function App() {
   }
 
   return (
+    <NavigationContainer>
+      <StatusBar style="light" />
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+          contentStyle: { backgroundColor: "#020617" },
+        }}
+      >
+        {userToken == null ? (
+          // Auth Stack
+          <>
+            <Stack.Screen name="Login" component={LoginScreen} />
+            <Stack.Screen name="Otp" component={OtpScreen} />
+          </>
+        ) : (
+          // App Stack
+          <>
+            {userLevel == null ? (
+              <Stack.Screen name="Onboarding" component={OnboardingScreen} />
+            ) : null}
+            <Stack.Screen name="Main" component={MainTabs} />
+            <Stack.Screen name="Module" component={ModuleScreen} />
+            <Stack.Screen name="CurrencyConverter" component={CurrencyConverterScreen} />
+          </>
+        )}
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default function App() {
+  return (
     <SafeAreaProvider>
-      <NavigationContainer>
-        <StatusBar style="light" />
-        <Stack.Navigator
-          initialRouteName={initialRoute}
-          screenOptions={{
-            headerShown: false,
-            contentStyle: { backgroundColor: "#020617" },
-          }}
-        >
-          <Stack.Screen name="Onboarding" component={OnboardingScreen} />
-          <Stack.Screen name="Main" component={MainTabs} />
-          <Stack.Screen name="Module" component={ModuleScreen} />
-          <Stack.Screen name="CurrencyConverter" component={CurrencyConverterScreen} />
-        </Stack.Navigator>
-      </NavigationContainer>
+      <AuthProvider>
+        <RootNavigator />
+      </AuthProvider>
     </SafeAreaProvider>
   );
 }

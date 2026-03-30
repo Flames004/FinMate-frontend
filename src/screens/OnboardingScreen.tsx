@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Pressable, Text, View } from "react-native";
 import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 import type { RootStackParamList } from "../types/navigation";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useAuth } from "../context/AuthContext";
 
 type Props = NativeStackScreenProps<RootStackParamList, "Onboarding">;
 
@@ -137,6 +137,7 @@ export default function OnboardingScreen({ navigation }: Props) {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [score, setScore] = useState(0);
   const [level, setLevel] = useState<string | null>(null);
+  const { completeOnboarding } = useAuth();
 
   const handleOptionSelect = async (points: number) => {
     const newScore = score + points;
@@ -150,12 +151,13 @@ export default function OnboardingScreen({ navigation }: Props) {
       if (newScore > 24) assignedLevel = "Master";
       
       setLevel(assignedLevel);
-      await AsyncStorage.setItem("@finmate_userLevel", assignedLevel);
     }
   };
 
-  const finishOnboarding = () => {
-    navigation.replace("Main", { screen: "Home" });
+  const finishOnboarding = async () => {
+    if (level) {
+      await completeOnboarding(level);
+    }
   };
 
   // ──── Results Screen ────
