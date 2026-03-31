@@ -22,6 +22,7 @@ import type { RootStackParamList, MainTabParamList } from "./src/types/navigatio
 
 import { Ionicons } from "@expo/vector-icons";
 import { AuthProvider, useAuth } from "./src/context/AuthContext";
+import ChatbotModal from "./src/components/ChatbotModal";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 const Tab = createBottomTabNavigator<MainTabParamList>();
@@ -131,11 +132,13 @@ function RootNavigator() {
   );
 }
 
+
 export default function App() {
   return (
     <SafeAreaProvider>
       <AuthProvider>
         <RootNavigator />
+        <ChatbotModal />
       </AuthProvider>
     </SafeAreaProvider>
   );
