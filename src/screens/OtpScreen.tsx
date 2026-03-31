@@ -24,7 +24,7 @@ type OtpScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, "Ot
 export default function OtpScreen() {
   const route = useRoute<OtpScreenRouteProp>();
   const navigation = useNavigation<OtpScreenNavigationProp>();
-  const { phone } = route.params;
+  const { email } = route.params;
   const { signIn } = useAuth();
 
   const [otp, setOtp] = useState("");
@@ -49,7 +49,7 @@ export default function OtpScreen() {
 
     setLoading(true);
     try {
-      const response = await verifyOtp(phone, otp);
+      const response = await verifyOtp(email, otp);
       if (response.success) {
         // useAuth.signIn now handles fetching cloud profile and populating state/storage
         await signIn(response.token, response.data.level);
@@ -66,7 +66,7 @@ export default function OtpScreen() {
     
     setLoading(true);
     try {
-      await sendOtp(phone);
+      await sendOtp(email);
       setTimer(60);
       Alert.alert("Success", "New OTP sent!");
     } catch (error: any) {
@@ -96,7 +96,7 @@ export default function OtpScreen() {
           <Text className="text-3xl font-bold text-white text-center">Verify Identity</Text>
           <Text className="text-slate-400 text-center mt-2 text-lg">
             Enter the 6-digit code sent to{"\n"}
-            <Text className="text-emerald-500 font-semibold">+91 {phone}</Text>
+            <Text className="text-emerald-500 font-semibold">{email}</Text>
           </Text>
         </View>
 

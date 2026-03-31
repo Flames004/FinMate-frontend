@@ -3,7 +3,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { getMe, syncData as syncCloud, updateProfile } from "../services/authService";
 
 export interface UserData {
-  phone?: string;
+  email?: string;
   name?: string;
   level: string | null;
   progressMap: Record<string, number>;
@@ -97,7 +97,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           progressMap: cloudData.progressMap !== undefined ? cloudData.progressMap : userData.progressMap,
           monthly_budget: cloudData.monthly_budget !== undefined ? cloudData.monthly_budget : userData.monthly_budget,
           transactions: cloudData.transactions !== undefined ? cloudData.transactions : userData.transactions,
-          phone: cloudData.phone
+          email: cloudData.email
         };
         
         // Update local state

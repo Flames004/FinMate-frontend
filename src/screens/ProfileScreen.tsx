@@ -84,11 +84,11 @@ export default function ProfileScreen() {
         <View className="items-center mt-8 mb-8">
           <View className="w-24 h-24 bg-emerald-500/20 rounded-full items-center justify-center border-4 border-emerald-500/30">
             <Text className="text-white text-3xl font-bold">
-              {editingName ? editingName.charAt(0).toUpperCase() : userData?.phone?.charAt(0)}
+              {editingName ? editingName.charAt(0).toUpperCase() : (userData?.email ? userData.email.charAt(0).toUpperCase() : '?')}
             </Text>
           </View>
           <Text className="text-white text-2xl font-bold mt-4">{editingName || "FinMate User"}</Text>
-          <Text className="text-slate-400 text-lg">+91 {userData?.phone}</Text>
+          <Text className="text-slate-400 text-lg">{userData?.email}</Text>
         </View>
 
         <View className="bg-slate-900 rounded-3xl p-6 mb-6 border border-slate-800">

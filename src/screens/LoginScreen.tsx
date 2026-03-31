@@ -19,20 +19,20 @@ import { sendOtp } from "../services/authService";
 type LoginScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, "Login">;
 
 export default function LoginScreen() {
-  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const navigation = useNavigation<LoginScreenNavigationProp>();
 
   const handleSendOtp = async () => {
-    if (phone.length < 10) {
-      Alert.alert("Invalid Phone", "Please enter a valid 10-digit phone number.");
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      Alert.alert("Invalid Email", "Please enter a valid email address.");
       return;
     }
 
     setLoading(true);
     try {
-      await sendOtp(phone);
-      navigation.navigate("Otp", { phone });
+      await sendOtp(email);
+      navigation.navigate("Otp", { email });
     } catch (error: any) {
       Alert.alert("Error", error);
     } finally {
@@ -57,17 +57,19 @@ export default function LoginScreen() {
         </View>
 
         <View className="bg-slate-900 p-6 rounded-3xl border border-slate-800 shadow-xl">
-          <Text className="text-white text-lg font-semibold mb-2">Mobile Number</Text>
+          <Text className="text-white text-lg font-semibold mb-2">Email Address</Text>
           <View className="flex-row items-center bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 mb-6 focus:border-emerald-500">
-            <Text className="text-slate-400 mr-2 font-medium">+91</Text>
+            <Ionicons name="mail" size={20} color="#475569" className="mr-3" />
             <TextInput
-              className="flex-1 text-white text-lg font-medium"
-              placeholder="9876543210"
+              className="flex-1 text-white text-lg font-medium ml-2"
+              placeholder="your@email.com"
               placeholderTextColor="#475569"
-              keyboardType="phone-pad"
-              maxLength={10}
-              value={phone}
-              onChangeText={setPhone}
+              keyboardType="email-address"
+              autoCapitalize="none"
+              autoComplete="email"
+              maxLength={60}
+              value={email}
+              onChangeText={setEmail}
             />
           </View>
 

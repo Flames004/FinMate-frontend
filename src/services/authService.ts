@@ -2,20 +2,20 @@ import axios from "axios";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 // Replace with your actual local IP address if testing on a physical device
-const API_URL = "http://localhost:5000/api/users"; 
+const API_URL = "http://10.76.140.41:5000/api/users"; 
 
-export const sendOtp = async (phone: string) => {
+export const sendOtp = async (email: string) => {
   try {
-    const response = await axios.post(`${API_URL}/send-otp`, { phone });
+    const response = await axios.post(`${API_URL}/send-otp`, { email });
     return response.data;
   } catch (error: any) {
     throw error.response?.data?.message || "Failed to send OTP";
   }
 };
 
-export const verifyOtp = async (phone: string, otp: string) => {
+export const verifyOtp = async (email: string, otp: string) => {
   try {
-    const response = await axios.post(`${API_URL}/verify-otp`, { phone, otp });
+    const response = await axios.post(`${API_URL}/verify-otp`, { email, otp });
     if (response.data.success && response.data.token) {
       await AsyncStorage.setItem("@finmate_token", response.data.token);
     }

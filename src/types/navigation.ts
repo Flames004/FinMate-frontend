@@ -9,7 +9,7 @@ export type MainTabParamList = {
 
 export type RootStackParamList = {
   Login: undefined;
-  Otp: { phone: string };
+  Otp: { email: string };
   Onboarding: undefined;
   Main: NavigatorScreenParams<MainTabParamList>;
   Module: { moduleId: string };
