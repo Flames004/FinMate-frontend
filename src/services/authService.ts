@@ -1,8 +1,8 @@
 import axios from "axios";
+import { Platform } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-// Replace with your actual local IP address if testing on a physical device
-const API_URL = "http://10.76.140.41:5000/api/users"; 
+const API_URL = `${process.env.EXPO_PUBLIC_API_BASE_URL || "http://localhost:5000"}/api/users`;
 
 export const sendOtp = async (email: string) => {
   try {

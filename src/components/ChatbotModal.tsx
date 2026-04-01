@@ -15,8 +15,7 @@ import { Ionicons } from "@expo/vector-icons";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
 
-// Using the detected local IP address for the connected backend
-const BASE_URL = "http://10.76.140.41:5000";
+const BASE_URL = process.env.EXPO_PUBLIC_API_BASE_URL || "http://localhost:5000";
 
 type Message = {
   id: string;
